@@ -1,7 +1,7 @@
 import prisma from '../config/database';
 
-function getVoucherByCode(code: string) {
-  return prisma.voucher.findUnique({
+async function getVoucherByCode(code: string) {
+  return await prisma.voucher.findFirst({
     where: { code }
   });
 }
