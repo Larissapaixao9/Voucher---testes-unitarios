@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import voucherService from '../services/voucherService';
+import * as voucherService from '../services/voucherService';
 
 async function createVoucher(req: Request, res: Response) {
   const { code, discount } = req.body;

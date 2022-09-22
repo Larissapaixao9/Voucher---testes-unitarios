@@ -43,7 +43,7 @@ async function changeVoucherToUsed(code: string) {
   return await voucherRepository.useVoucher(code);
 }
 
-function isAmountValidForDiscount(amount: number) {
+export async function isAmountValidForDiscount(amount: number) {
   return amount >= MIN_VALUE_FOR_DISCOUNT;
 }
 
